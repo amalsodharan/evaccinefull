@@ -1,0 +1,190 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Dec 13, 2023 at 07:21 AM
+-- Server version: 5.1.36
+-- PHP Version: 5.3.0
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `evaccine`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE IF NOT EXISTS `admin` (
+  `slno` int(30) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  `pass` varchar(30) NOT NULL,
+  PRIMARY KEY (`slno`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`slno`, `name`, `pass`) VALUES
+(1, 'admin', '1234');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bookinfo`
+--
+
+CREATE TABLE IF NOT EXISTS `bookinfo` (
+  `slno` int(30) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  `age` varchar(30) NOT NULL,
+  `dose` varchar(30) NOT NULL,
+  `type` varchar(30) NOT NULL,
+  `date` varchar(100) NOT NULL,
+  PRIMARY KEY (`slno`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+
+--
+-- Dumping data for table `bookinfo`
+--
+
+INSERT INTO `bookinfo` (`slno`, `name`, `age`, `dose`, `type`, `date`) VALUES
+(16, 'amal', '12-17', '1st dose', 'covaxin', '2024-01-07 slot2');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `slot`
+--
+
+CREATE TABLE IF NOT EXISTS `slot` (
+  `slno` int(11) NOT NULL AUTO_INCREMENT,
+  `date` date NOT NULL,
+  `slotname` varchar(30) NOT NULL,
+  `status` varchar(30) NOT NULL DEFAULT 'VACCANT',
+  `userid` varchar(30) NOT NULL DEFAULT '0',
+  `slotid` varchar(30) NOT NULL,
+  PRIMARY KEY (`slno`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=83 ;
+
+--
+-- Dumping data for table `slot`
+--
+
+INSERT INTO `slot` (`slno`, `date`, `slotname`, `status`, `userid`, `slotid`) VALUES
+(1, '2024-01-01', 'slot1', 'BOOKED', '0', 'cov1'),
+(2, '2024-01-01', 'slot2', 'VACCANT', '0', 'cov2'),
+(3, '2024-01-02', 'slot1', 'VACCANT', '0', 'cov3'),
+(4, '2024-01-02', 'slot2', 'VACCANT', '0', 'cov4'),
+(5, '2024-01-03', 'slot1', 'VACCANT', '0', 'cov5'),
+(6, '2024-01-03', 'slot2', 'BOOKED', '0', 'cov6'),
+(7, '2024-01-04', 'slot1', 'VACCANT', '0', 'cov7'),
+(8, '2024-01-04', 'slot2', 'VACCANT', '0', 'cov8'),
+(9, '2024-01-05', 'slot1', 'VACCANT', '0', 'cov9'),
+(10, '2024-01-05', 'slot2', 'VACCANT', '0', 'cov10'),
+(11, '2024-01-06', 'slot1', 'VACCANT', '0', 'cov11'),
+(12, '2024-01-06', 'slot2', 'VACCANT', '0', 'cov12'),
+(13, '2024-01-07', 'slot1', 'VACCANT', '0', 'cov13'),
+(14, '2024-01-07', 'slot2', 'VACCANT', '0', 'cov14'),
+(15, '2024-01-08', 'slot1', 'VACCANT', '0', 'cov15'),
+(16, '2024-01-08', 'slot2', 'VACCANT', '0', 'cov16'),
+(17, '2024-01-09', 'slot1', 'VACCANT', '0', 'cov17'),
+(18, '2024-01-09', 'slot2', 'VACCANT', '0', 'cov18'),
+(19, '2024-01-10', 'slot1', 'VACCANT', '0', 'cov19'),
+(20, '2024-01-10', 'slot2', 'VACCANT', '0', 'cov20'),
+(21, '2024-01-11', 'slot1', 'VACCANT', '0', 'cov21'),
+(22, '2024-01-11', 'slot2', 'VACCANT', '0', 'cov22'),
+(23, '2024-01-12', 'slot1', 'VACCANT', '0', 'cov23'),
+(24, '2024-01-12', 'slot2', 'VACCANT', '0', 'cov24'),
+(25, '2024-01-13', 'slot1', 'VACCANT', '0', 'cov25'),
+(26, '2024-01-13', 'slot2', 'VACCANT', '0', 'cov26'),
+(27, '2024-01-14', 'slot1', 'VACCANT', '0', 'cov27'),
+(28, '2024-01-14', 'slot2', 'VACCANT', '0', 'cov28'),
+(29, '2024-01-15', 'slot1', 'VACCANT', '0', 'cov29'),
+(30, '2024-01-15', 'slot2', 'VACCANT', '0', 'cov30'),
+(31, '2024-01-16', 'slot1', 'VACCANT', '0', 'cov31'),
+(32, '2024-01-16', 'slot2', 'VACCANT', '0', 'cov32'),
+(33, '2024-01-17', 'slot1', 'VACCANT', '0', 'cov33'),
+(34, '2024-01-17', 'slot2', 'VACCANT', '0', 'cov34'),
+(35, '2024-01-18', 'slot1', 'VACCANT', '0', 'cov35'),
+(36, '2024-01-18', 'slot2', 'VACCANT', '0', 'cov36'),
+(37, '2024-01-19', 'slot1', 'VACCANT', '0', 'cov37'),
+(38, '2024-01-19', 'slot2', 'VACCANT', '0', 'cov38'),
+(39, '2024-01-20', 'slot1', 'VACCANT', '0', 'cov39'),
+(40, '2024-01-20', 'slot2', 'VACCANT', '0', 'cov40'),
+(41, '2024-01-21', 'slot1', 'VACCANT', '0', 'cov41'),
+(42, '2024-01-21', 'slot2', 'VACCANT', '0', 'cov42'),
+(43, '2024-01-22', 'slot1', 'VACCANT', '0', 'cov43'),
+(46, '2024-01-22', 'slot2', 'VACCANT', '0', 'cov46'),
+(44, '2024-01-24', 'slot1', 'VACCANT', '0', 'cov44'),
+(45, '2024-01-24', 'slot2', 'VACCANT', '0', 'cov45'),
+(51, '2024-01-25', 'slot1', 'VACCANT', '0', '0'),
+(52, '2024-01-25', 'slot2', 'VACCANT', '0', '0'),
+(53, '2024-01-26', 'slot1', 'VACCANT', '0', '0'),
+(54, '2024-01-26', 'slot', 'VACCANT', '0', '0'),
+(55, '2024-01-23', 'slot1', 'VACCANT', '0', '0'),
+(56, '2024-01-23', 'slot2', 'VACCANT', '0', '0'),
+(57, '2024-01-24', 'slot1', 'VACCANT', '0', '0'),
+(58, '2024-01-24', 'slot2', 'VACCANT', '0', '0'),
+(59, '2024-01-25', 'slot1', 'VACCANT', '0', '0'),
+(60, '2024-01-25', 'slot2', 'VACCANT', '0', '0'),
+(61, '2024-01-26', 'slot1', 'VACCANT', '0', '0'),
+(62, '2024-01-26', 'slot2', 'VACCANT', '0', '0'),
+(63, '2023-11-27', 'slot1', 'VACCANT', '0', '0'),
+(64, '2024-01-27', 'slot2', 'VACCANT', '0', '0'),
+(65, '2024-01-28', 'slot1', 'VACCANT', '0', '0'),
+(66, '2024-01-28', 'slot2', 'VACCANT', '0', '0'),
+(67, '2024-01-29', 'slot1', 'VACCANT', '0', '0'),
+(68, '2024-01-29', 'slot2', 'VACCANT', '0', '0'),
+(69, '2024-01-30', 'slot1', 'VACCANT', '0', '0'),
+(70, '2024-01-30', 'slot2', 'VACCANT', '0', '0'),
+(71, '2024-01-31', 'slot1', 'VACCANT', '0', '0'),
+(72, '2024-01-31', 'slot2', 'VACCANT', '0', '0'),
+(73, '2023-11-27', 'slot1', 'VACCANT', '0', '0'),
+(74, '2024-01-27', 'slot2', 'VACCANT', '0', '0'),
+(75, '2024-01-28', 'slot1', 'VACCANT', '0', '0'),
+(76, '2024-01-28', 'slot2', 'VACCANT', '0', '0'),
+(77, '2024-01-29', 'slot1', 'VACCANT', '0', '0'),
+(78, '2024-01-29', 'slot2', 'VACCANT', '0', '0'),
+(79, '2024-01-30', 'slot1', 'VACCANT', '0', '0'),
+(80, '2024-01-30', 'slot2', 'VACCANT', '0', '0'),
+(81, '2024-01-31', 'slot1', 'VACCANT', '0', '0'),
+(82, '2024-01-31', 'slot2', 'VACCANT', '0', '0');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `slno` int(30) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  `mobile` varchar(30) NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `dob` date NOT NULL,
+  `age` int(11) NOT NULL,
+  `gender` varchar(30) NOT NULL,
+  PRIMARY KEY (`slno`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`slno`, `name`, `mobile`, `username`, `password`, `dob`, `age`, `gender`) VALUES
+(1, 'test', '5', 'test', '123', '2023-10-12', 12, 'female'),
+(12, 'new', 'mobile', 'amal', 'PASS', '2023-12-03', 18, 'male'),
+(4, 'test', '5', 'test', '123', '2023-10-12', 12, 'female'),
+(5, 'test', '5', 'test', '123', '2023-10-13', 45, 'female'),
+(6, 'test', '5', 'test', '123', '2023-10-13', 45, 'female'),
+(7, 'amal', '9988776655', 'deklord', 'amal', '2023-10-06', 20, 'male'),
+(8, 'Abin tyger', 'tyger@gmail.com', 'hukkum123', 'ipe', '2023-10-09', 20, 'male'),
+(9, 'ipe', '12334', 'IPERTIGEER', '1234`', '2023-10-06', 12, 'male'),
+(13, 'melvin', '9777', 'melvin124', 'passs', '2023-12-01', 19, 'male');

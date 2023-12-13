@@ -1,0 +1,62 @@
+body{
+    font-family: sans-serif;
+}
+nav ul{
+    float: right;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+    letter-spacing: 2px;
+}
+.top{
+    background-color: rgba(21, 98, 212, 0.89);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+}
+nav h2{
+    padding-top: 8px;
+    padding-left: 10px;
+    font-size: 35px;
+    color: white;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover{
+    color: red;
+}
+.im{
+    padding-right: 30px;
+}
+.middle h1{
+    padding: 30px;
+    font-size: 65px;
+    color: blueviolet;
+}
+.ne{
+    color: white;
+    text-decoration: none;
+}
+.but{
+    background-color: rgb(0, 84, 211);
+    border-style: none;
+    height: 60px;
+    width: 200px;
+    border-radius: 8px;
+}
+.butu{
+    padding-left: 40px;
+}
+.last{
+    background-color: rgba(21, 98, 212, 0.89);
+    height: 280px;
+
+}
+.last h5{
+    color: white;
+    padding: 40px;
+}

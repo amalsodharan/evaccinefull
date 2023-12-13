@@ -1,0 +1,29 @@
+<?php
+             $host = "localhost";
+             $username = "root"; 
+             $password = ""; 
+             $database = "evaccine";
+             $mysqli=mysql_connect($host,$username,$password);
+             mysql_select_db($database,$mysqli); 
+            $qry="select * from slot";
+            $result=mysql_query($qry,$mysqli);
+
+
+        ?>
+        <div class="overflow-auto" id="dat">
+        <div class="datee">
+            <ul>
+                <?php
+                        while($row=mysql_fetch_array($result))
+                        {
+                ?>
+                <li>
+                    <input type="checkbox" class="btn-check" id="btn-check-9-outlined" autocomplete="off" >
+                    <label class="btn btn-outline-primary btn-sm" for="btn-check-9-outlined" <?php if($row[3]=='VACCANT') {  ?>style="background-color: yellow;" <?php  }else { ?> style="background-color: gray;" <?php } ?>><?php echo $row[1].'<br>'.$row[2]  ?></label>
+                </li>
+                <?php
+                        }
+                ?>
+               
+                
+            </ul> 
